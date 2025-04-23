@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cardiovascular Risk Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800">Your Cardiovascular Risk Assessment</h1>
+                <p class="text-gray-600 mt-2">AI-powered prediction results</p>
+            </div>
+
+            <div id="resultContainer" class="space-y-6">
+                <!-- Risk Level Card -->
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-heartbeat text-blue-500 text-2xl"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-lg font-medium text-blue-800" id="riskLevel">Calculating your risk level...</h3>
+                            <div class="mt-2 text-sm text-blue-700">
+                                <p id="riskDescription">Our AI is analyzing your health data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confidence Level -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="text-sm font-medium text-gray-500">Prediction Confidence</h4>
+                    <div class="mt-2">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div id="confidenceBar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-600" id="confidenceText">0% confidence</p>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-clipboard-check text-green-500 text-2xl"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-lg font-medium text-green-800">Personalized Recommendations</h3>
+                            <div class="mt-2 text-sm text-green-700">
+                                <ul class="list-disc pl-5 space-y-1" id="recommendations">
+                                    <li>Loading recommendations...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="pt-6 flex space-x-4">
+                    <a href="form.html" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md text-center">
+                        <i class="fas fa-redo mr-2"></i> Reassess
+                    </a>
+                    <a href="index.html" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md text-center">
+                        <i class="fas fa-home mr-2"></i> Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
